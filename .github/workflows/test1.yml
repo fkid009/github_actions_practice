@@ -17,6 +17,7 @@ jobs:
       run: |
         echo "Hello World"
         echo "Hello World"
+        echo "Hello World"
 
     - name: Github 자체 저장되어 있는 변수 출력
       run: |
