@@ -1,0 +1,29 @@
+name: Github Actions 간단 예제
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  My-first-job:
+    runs-on: Ubuntu-latest
+
+    steps:
+    - name: Hello World 하나 출력
+      run: echo "Hello World"
+
+    - name: Hello World 여러개 출력
+      run: |
+        echo "Hello World"
+        echo "Hello World"
+
+    - name: Github 자체 저장되어 있는 변수 출력
+      run: |
+        echo $GITHUB_SHA
+        echo $GITHUB_REPOSITORY
+
+    - name: Github Actions Secret 변수 출력
+      run: |
+        echo $ {{ secrets.SECRET1 }}
+        echo $ {{ secrets.SECRET2 }}
